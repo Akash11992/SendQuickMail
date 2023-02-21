@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "products": [
+    {
+      "name": "akash",
+      "description": "akash",
+      "available": true,
+      "id": 4
+    },
+    {
+      "name": "chouhan",
+      "description": "akash",
+      "id": 5,
+      "available": true
+    },
+    {
+      "name": "shgdgds@gkdshf.ovo",
+      "description": "Akajshdhfghsdhf;sakh",
+      "id": 6
+    },
+    {
+      "name": "sA",
+      "description": "Akajshdhfghsdhf;sakh",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

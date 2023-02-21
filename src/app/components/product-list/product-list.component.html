@@ -1,0 +1,182 @@
+
+<div class="list row">
+    <div class="col-md-8">
+    <div class="input-group mb-4">
+    <input
+    type="text"
+    class="form-control"
+    placeholder="Search by name"
+    [(ngModel)]="name"
+    />
+    <div class="input-group-append">
+    <button
+    class="btn btn-outline-secondary"
+    type="button"
+    (click)="searchByName()"
+    >
+    Search
+    </button>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+    <h4>Product List</h4>
+    <ul class="list-group"  style="list-style: none;" class="list-group-item"
+    *ngFor="let product of products; let i = index"
+    [class.active]="i == currentIndex"
+    (click)="setCurrentProduct(product, i)">
+        <li
+        >
+        {{ product.name }}
+        </li>
+        <li>
+        {{ product.description }}
+            
+        </li>
+        </ul>
+        <button class="m-4 btn btn-sm btn-danger" (click)="deleteAllProducts()">
+            Delete All
+            </button>
+            </div>
+            <div class="col-md-6">
+            <div *ngIf="currentProduct">
+            <h4>Product</h4>
+            <div>
+            <label><strong>Name:</strong></label>
+             {{ currentProduct['name'] }}
+            </div>
+            <div>
+            <label><strong>Description:</strong></label>
+            {{ currentProduct['description'] }}
+            </div>
+            <div>
+            <label><strong>Status:</strong></label>
+            {{ currentProduct['available'] ? "Available" : "Not available" }}
+            </div>
+            
+            <a class="badge badge-warning" routerLink="/products/{{ currentProduct['id'] }}">
+                Edit
+                </a>
+                </div>
+                <div *ngIf="!currentProduct">
+                <br />
+                <p>Please click on a product</p>
+                </div>
+                </div>
+                </div>
+
+
+
+
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">..aka.</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">..hhhhhh.</div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">..vvvvvvv.</div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p>product-list works!</p>
+ <div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="name" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="searchByName()">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Product List</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let product of products; let i = index"
+                [class.active]="i == currentIndex" (click)="setCurrentProduct(product, i)">
+                {{ product.name }}
+            </li>
+        </ul>
+        <button class="m-4 btn btn-sm btn-danger" (click)="deleteAllProducts()">
+            Delete All
+        </button>
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentProduct">
+            <h4>Product</h4>
+            <div>
+                <label><strong>Name:</strong></label> {{ currentProduct.name }}
+            </div>
+            <div>
+                <label><strong>Description:</strong></label>
+                {{ currentProduct.description }}
+            </div>
+            <div>
+                <label><strong>Status:</strong></label>
+                {{ currentProduct.available ? "Available" : "Not available" }}
+            </div>
+            <a class="badge badge-warning" routerLink="/products/{{ currentProduct.id }}">
+                Edit
+            </a>
+        </div>
+        <div *ngIf="!currentProduct">
+            <br />
+            <p>Please click on a product</p>
+        </div>
+    </div>
+</div> -->

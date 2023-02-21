@@ -1,0 +1,14 @@
+<h4>----------{{title}}---------- </h4>
+<form #LoginForm="ngForm" (ngSubmit)=userLog(LoginForm.value)>
+    <input type="text" required #name="ngModel" email placeholder="Enter Name" name="name" ngModel/>
+    <br/>
+    <span *ngIf="name.invalid && name.touched" style="color: red;" >please enter a valid input</span>
+    <br/>
+    <input type="password"  minlength="3" required #password ="ngModel" placeholder="Enter password" name="password" ngModel/>
+    <br/>
+    <span *ngIf="password.invalid && password.touched" style="color: red;" >please enter a valid input</span>
+
+    <br/>
+<button [disabled]="LoginForm.invalid" >LogIn</button>
+
+</form>
